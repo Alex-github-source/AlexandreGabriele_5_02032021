@@ -119,7 +119,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             console.log(orderId);
             
             localStorage.setItem('orderId',orderId);
-            window.location.href = 'frontend/confirm.html';
+            window.location.href = 'confirm.html';
     } catch (error) {
         console.warn(error)
     }

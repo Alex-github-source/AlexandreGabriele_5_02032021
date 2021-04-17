@@ -29,7 +29,7 @@ function displayFurniture(furniture){
    cloneElt.getElementById("card__title").textContent = furniture.name;
    cloneElt.getElementById("card__body").textContent = furniture.description;
    cloneElt.getElementById("card__price").textContent = furniture.price + ' $';
-   cloneElt.getElementById('linkProduct').href = "frontend/produit.html?id=" + furniture._id;
+   cloneElt.getElementById('linkProduct').href = "produit.html?id=" + furniture._id;
    
    
    document.getElementById('main').appendChild(cloneElt);
