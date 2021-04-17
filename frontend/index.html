@@ -1,0 +1,111 @@
+<!-- PAGE D'ACCUEIL -->
+
+<!DOCTYPE html>
+<html lang="eng">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Orinoco, Original and Unique Furniture</title>
+    <meta name="description" content="Best place to purchase a Unique and Original wooden furniture!"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="frontend/bootstrap.css"/>
+
+    <link rel="stylesheet" href="frontend/style.css"/>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"/>
+</head>
+<body>
+    <header>
+            <div class =" container">
+                <div class="row">
+                    <nav class="navbar navbar-expand navbar-light">
+                      
+                        <a class="navbar-brand" href="frontend/index.html"><img src="backend/images/logoori.png" id="logo" alt='logo orinoco' /> </a>
+                      
+                      
+                            <ul class="navbar-nav">
+                                <li class="nav-item active ">
+                                <a class="nav-link" href="frontend/index.html"><i class="fas fa-home"></i> Home</a>
+                                </li>
+                                <li class="nav-item ">
+                                <a class="nav-link" href="frontend/basket.html"><i class="fas fa-shopping-cart"></i> Basket</a>
+                                </li>
+                            </ul>
+                      
+                    </nav>
+                </div>
+            
+            </div>  
+    </header>
+    <div class="container">
+      <h1>Orinoco Wooden Furniture</h1>
+      <div class="row">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="backend/images/oak_1.jpg" class="d-block w-100" alt="cross table">
+            </div>
+            <div class="carousel-item">
+              <img src="backend/images/oak_2.jpg" class="d-block w-100" alt="dinner table">
+            </div>
+            <div class="carousel-item">
+              <img src="backend/images/oak_3.jpg" class="d-block w-100" alt="expandable table">
+            </div>
+            <div class="carousel-item">
+              <img src="backend/images/oak_4.jpg" class="d-block w-100" alt="bench">
+            </div>
+            <div class="carousel-item">
+              <img src="backend/images/oak_5.jpg" class="d-block w-100" alt="vintage chair">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+   
+    <main class="container" id="main">
+        <template id="templateFurniture">
+          <div class="row">
+            
+            <div class="card ">
+                <div id="cardBody" class="card-body">
+                  <img src=".." alt="image produit" class="card-img-top" id="card__img"> 
+                  <h5 id="card__title" class="card-title">Card title</h5>
+                  <p id="card__body" class="card-text">Description</p>
+                  <p id="card__price" class="card-text">Price</p>  
+                  <a id="linkProduct" href="produit.html"><button type="button" id ="orderButton" class="btn btn-warning">Order</button></a>  
+                </div>
+            </div>
+          </div> 
+        </template>
+    </main>
+    <footer class="bg_light">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <ul class="list-inline text-center">
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item">&middot;</li>
+                    <li class="list-inline-item"><a href="#">Private Life</a></li>
+                    <li class="list-inline-item">&middot;</li>
+                    <li class="list-inline-item"><a href="mailto:">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    </footer>
+    <script src='frontend/index.js'></script>
+    <script src='frontend/bootstrap.bundle.js'></script>
+</body>
+
+</html>

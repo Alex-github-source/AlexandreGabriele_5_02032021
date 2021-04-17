@@ -1,0 +1,31 @@
+body{
+  height: auto;
+}
+header,
+footer {
+  background-color: #f3e9f1;
+}
+
+#logo {
+  width: 50%;
+}
+
+ul {
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+}
+nav .navflex {
+  justify-content: flex-end;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+
+/*# sourceMappingURL=style.css.map */
