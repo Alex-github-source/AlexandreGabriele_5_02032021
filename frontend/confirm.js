@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded',  () =>{
     const clearButton = document.getElementById('clearButton');
     clearButton.addEventListener('click' , function clearOrder(){
         localStorage.clear();
-        window.location.href = 'frontend/index.html';
+        window.location.href = 'index.html';
 
     })
 })
