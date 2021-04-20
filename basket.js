@@ -135,7 +135,7 @@ clearBasket();
 verifBasket();
 
 function verifBasket () {
-    let buttonSubmit = document.getElementById('buttonSubmit');
+    let buttonSubmit = document.getElementById('submitButton');
     if (basketContent == null){
         buttonSubmit.disabled = true;
     }
