@@ -129,10 +129,10 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             else{
                 buttonSubmit.disabled = true;
                 alert (error);
-            }
+            };
     } catch (error) {
         console.warn(error)
-    }}
+    }
    
 
  
