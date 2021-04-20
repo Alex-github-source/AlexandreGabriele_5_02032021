@@ -97,15 +97,10 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
    
 document.querySelector('form').addEventListener('submit', async (e) => {
     console.log("e", e);
-    let buttonSubmit = document.getElementById('submitButton');
-    if(localStorage.length > 0 ){
-        buttonSubmit.disabled = false;
-    }
-    else{
-        buttonSubmit.disabled = true;
-    };
+   if (localStorage.length > 0){
     try {
         e.preventDefault();
+        buttonSubmit.disabled = false;
         //récupération données formulaire
         const FD = new FormData(document.querySelector('form'));
         const contact=Object.fromEntries(FD.entries());
@@ -130,6 +125,9 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             window.location.href = 'confirm.html';
     } catch (error) {
         console.warn(error)
+    }}
+    else{
+        alert (error);
     }
 
  
