@@ -132,10 +132,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 
 });
 clearBasket();
-verifBasket();
-
+let buttonSubmit = document.getElementById('submitButton')
 function verifBasket () {
-    let buttonSubmit = document.getElementById('submitButton');
     if (basketContent === null){
         buttonSubmit.disabled = true;
     }
@@ -144,3 +142,4 @@ function verifBasket () {
 
     }
 };
+verifBasket();
