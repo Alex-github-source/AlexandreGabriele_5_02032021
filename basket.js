@@ -142,4 +142,3 @@ function verifBasket () {
 
     }
 };
-verifBasket();
