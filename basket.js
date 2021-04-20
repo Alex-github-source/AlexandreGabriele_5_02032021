@@ -100,6 +100,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
    if (localStorage.length > 0){
     try {
         e.preventDefault();
+        let buttonSubmit = document.getElementById('submitButton');
+
         buttonSubmit.disabled = false;
         //récupération données formulaire
         const FD = new FormData(document.querySelector('form'));
