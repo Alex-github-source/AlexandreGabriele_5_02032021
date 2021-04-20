@@ -105,9 +105,9 @@ document.querySelector('form').addEventListener('submit', async (e) => {
         const contact=Object.fromEntries(FD.entries());
         console.log("contact",contact);
 
-        if (localStorage.length > 0 && FD.entries!= "" && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+        /*if (localStorage.length > 0 && FD.entries!= "" && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
         let submitButton = document.getElementById('submitButton');
-        submitButton.disabled = false;
+        submitButton.disabled = false;*/
         const orderData = JSON.stringify({ contact, products });
         console.log(orderData);
             //envoi des objet contact et tableau products a l'API
