@@ -98,7 +98,7 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
 //Fonction pour récupérer les données du formulaire , les envoyer a l'API et récupérer en retour l'id de confirmation de commande
    
 document.querySelector('form').addEventListener('submit', async (e) => {
-  
+    verifBasket();
     console.log("e", e);
     try {
         e.preventDefault();
