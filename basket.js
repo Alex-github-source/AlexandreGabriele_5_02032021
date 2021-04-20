@@ -1,6 +1,4 @@
-const { enable, enabled } = require("debug");
-const { DocumentQuery } = require("mongoose");
-const { disableUnicode } = require("npmlog");
+
 
 //Creation des variables qui seront envoyées dans le localStorage
 let allPrices = [];
