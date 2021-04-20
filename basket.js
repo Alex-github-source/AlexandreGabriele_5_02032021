@@ -97,6 +97,13 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
    
 document.querySelector('form').addEventListener('submit', async (e) => {
     console.log("e", e);
+    let buttonSubmit = document.getElementById('submitButton');
+    if(localStorage.length > 0 ){
+        buttonSubmit.disabled = false;
+    }
+    else{
+        buttonSubmit.disabled = true;
+    };
     try {
         e.preventDefault();
         //récupération données formulaire
