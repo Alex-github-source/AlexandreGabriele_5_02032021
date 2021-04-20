@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () =>{
 
    
 })
-//Creation de la structure html
+    //Creation de la structure html
 function getFurnitureItem(furniture,idFurniture) {
     let cardImg = document.getElementById('card__img');
     cardImg.src = furniture.imageUrl;
@@ -34,7 +34,7 @@ function getFurnitureItem(furniture,idFurniture) {
     let cardDescription = document.getElementById('card__body');
     cardDescription.textContent = furniture.description;
     let cardPrinc = document.getElementById('cardBody')
-//Appel du chois de vernis
+    //Appel du chois de vernis
     chooseVarnish( cardPrinc,furniture);
 
     let cardPrice = document.getElementById('card__price');

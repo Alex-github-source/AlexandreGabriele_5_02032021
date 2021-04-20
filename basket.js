@@ -1,3 +1,7 @@
+const { enable, enabled } = require("debug");
+const { DocumentQuery } = require("mongoose");
+const { disableUnicode } = require("npmlog");
+
 //Creation des variables qui seront envoyées dans le localStorage
 let allPrices = [];
 let products = [];
@@ -127,4 +131,16 @@ document.querySelector('form').addEventListener('submit', async (e) => {
  
 
 });
-clearBasket()
+clearBasket();
+verifBasket();
+
+function verifBasket () {
+    let buttonSubmit = document.getElementById('buttonSubmit');
+    if (basketContent == null){
+        buttonSubmit.disabled = true;
+    }
+    else{
+        buttonSubmit.disabled = false;
+
+    }
+};
