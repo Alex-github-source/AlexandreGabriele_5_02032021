@@ -99,15 +99,15 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     console.log("e", e);
     try {
         e.preventDefault();
-        let buttonSubmit = document.getElementById('submitButton');
 
         //récupération données formulaire
         const FD = new FormData(document.querySelector('form'));
         const contact=Object.fromEntries(FD.entries());
         console.log("contact",contact);
-        if (localStorage.length > 0 && contact != ""){
-            buttonSubmit.disabled = false;
 
+        if (localStorage.length > 0 && FD.entries!= "" && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
+        let submitButton = document.getElementById('submitButton');
+        submitButton.disabled = false;
         const orderData = JSON.stringify({ contact, products });
         console.log(orderData);
             //envoi des objet contact et tableau products a l'API
@@ -125,11 +125,10 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             
             localStorage.setItem('orderId',orderId);
             window.location.href = 'confirm.html';
+        }else{
+            alert(error);
         }
-            else{
-                buttonSubmit.disabled = true;
-                alert (error);
-            };
+          
     } catch (error) {
         console.warn(error)
     }
