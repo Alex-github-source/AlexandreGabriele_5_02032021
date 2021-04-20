@@ -97,17 +97,17 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
    
 document.querySelector('form').addEventListener('submit', async (e) => {
     console.log("e", e);
-   if (localStorage.length > 0){
     try {
         e.preventDefault();
         let buttonSubmit = document.getElementById('submitButton');
 
-        buttonSubmit.disabled = false;
         //récupération données formulaire
         const FD = new FormData(document.querySelector('form'));
         const contact=Object.fromEntries(FD.entries());
         console.log("contact",contact);
-        
+        if (localStorage.length > 0 && contact != ""){
+            buttonSubmit.disabled = false;
+
         const orderData = JSON.stringify({ contact, products });
         console.log(orderData);
             //envoi des objet contact et tableau products a l'API
@@ -125,12 +125,14 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             
             localStorage.setItem('orderId',orderId);
             window.location.href = 'confirm.html';
+        }
+            else{
+                alert (error);
+            }
     } catch (error) {
         console.warn(error)
     }}
-    else{
-        alert (error);
-    }
+   
 
  
 
