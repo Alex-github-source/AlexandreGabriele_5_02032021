@@ -132,8 +132,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 });
 clearBasket();
 function verifBasket () {
-    let buttonSubmit = document.getElementById('submitButton')
-    let basketContent = localStorage.getItem('basketContent'),
+    let buttonSubmit = document.getElementById('submitButton');
+    let basketContent = localStorage.getItem('basketContent');
     if (basketContent !=""){
         buttonSubmit.disabled = true;
     }
