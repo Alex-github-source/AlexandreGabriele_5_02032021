@@ -125,10 +125,10 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             
             localStorage.setItem('orderId',orderId);
             window.location.href = 'confirm.html';
-        }else{
+        /*}else{
             alert(error);
         }
-          
+          */
     } catch (error) {
         console.warn(error)
     }
