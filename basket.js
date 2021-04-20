@@ -127,6 +127,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
             window.location.href = 'confirm.html';
         }
             else{
+                buttonSubmit.disabled = true;
                 alert (error);
             }
     } catch (error) {
