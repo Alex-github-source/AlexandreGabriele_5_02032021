@@ -108,9 +108,6 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
         const contact=Object.fromEntries(FD.entries());
         console.log("contact",contact);
 
-        /*if (localStorage.length > 0 && FD.entries!= "" && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
-        let submitButton = document.getElementById('submitButton');
-        submitButton.disabled = false;*/
         const orderData = JSON.stringify({ contact, products });
         console.log(orderData);
             //envoi des objet contact et tableau products a l'API
@@ -128,10 +125,7 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
             
             localStorage.setItem('orderId',orderId);
             window.location.href = 'confirm.html';
-        /*}else{
-            alert(error);
-        }
-          */
+     
     } catch (error) {
         console.warn(error)
     }
@@ -143,14 +137,3 @@ else{
     alert(error);
 };
 
-/*function verifBasket () {
-    let buttonSubmit = document.getElementById('submitButton');
-    if (localStorage.length = 0){
-        buttonSubmit.disabled = true;
-    }
-    else{
-        buttonSubmit.disabled = false;
-
-    }
-};
-verifBasket();*/
