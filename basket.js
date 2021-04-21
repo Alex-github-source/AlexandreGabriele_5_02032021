@@ -140,6 +140,7 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
 
 })}
 else{
+    submitButton.disabled = true;
     alert(error);
 };
 
