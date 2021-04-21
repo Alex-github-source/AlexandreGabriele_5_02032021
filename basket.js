@@ -87,7 +87,8 @@ clearBasket.addEventListener('click', function() {
         
         let basketPrice = document.getElementById('basket_price');
         basketPrice.textContent = "Total Price : 0 $";
-
+        let submitButton = document.getElementById('submitButton');
+        submitButton.disabled = true;
         }
 })
 }
