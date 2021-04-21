@@ -90,6 +90,7 @@ clearBasket.addEventListener('click', function() {
         }
 })
 }
+clearBasket();
 
 const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order";
 
@@ -135,7 +136,6 @@ const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order"
         console.warn(error)
     }
 
-    clearBasket();
  
 
 })}
