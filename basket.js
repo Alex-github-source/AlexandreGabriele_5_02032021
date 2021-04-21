@@ -94,7 +94,7 @@ clearBasket.addEventListener('click', function() {
 const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order";
 
 //Fonction pour récupérer les données du formulaire , les envoyer a l'API et récupérer en retour l'id de confirmation de commande
-  if (localStorage > 0) {
+  if (localStorage.length > 0) {
     let submitButton = document.getElementById('submitButton');
     submitButton.disabled = false;
 document.querySelector('form').addEventListener('submit', async (e) => {
