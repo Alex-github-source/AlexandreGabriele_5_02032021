@@ -94,10 +94,10 @@ clearBasket.addEventListener('click', function() {
 const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order";
 
 //Fonction pour récupérer les données du formulaire , les envoyer a l'API et récupérer en retour l'id de confirmation de commande
-  if (localStorage.length > 0) {
+  if (localStorage.length > 0 && FD.entries!= "" && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
     let submitButton = document.getElementById('submitButton');
     submitButton.disabled = false;
-document.querySelector('form').addEventListener('submit', async (e) => {
+    document.querySelector('form').addEventListener('submit', async (e) => {
     console.log("e", e);
     try {
         e.preventDefault();
