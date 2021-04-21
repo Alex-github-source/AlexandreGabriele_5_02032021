@@ -87,6 +87,7 @@ clearBasket.addEventListener('click', function() {
         
         let basketPrice = document.getElementById('basket_price');
         basketPrice.textContent = "Total Price : 0 $";
+
         }
 })
 }
@@ -95,7 +96,9 @@ clearBasket();
 const url = "https://alexandregabrieleorinoco.herokuapp.com/api/furniture/order";
 
 //Fonction pour récupérer les données du formulaire , les envoyer a l'API et récupérer en retour l'id de confirmation de commande
-  if (basketContent ) {
+
+  let basketContentStored = localStorage.getItem('basketContent')
+  if (basketContentStored ) {
     let submitButton = document.getElementById('submitButton');
     submitButton.disabled = false;
     document.querySelector('form').addEventListener('submit', async (e) => {
